@@ -185,6 +185,7 @@ svg text {
 }
 .profile-img{
     width: calc(100%*4);
+    padding: 0;
     display: flex; /* 가로로 나열 */
     animation:slide 8s infinite; /* 8초동안 진행하고 무한반복 */
 }
@@ -205,15 +206,82 @@ svg text {
     }
 #text5 ul li{
   list-style: none;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 #text5 ul li:first-child{
   -webkit-text-stroke: 1px white;
   color: transparent;
-  font-size: 4rem;
+  font-size: 6rem;
   padding-bottom: 10px;
 }
 #text5{
   padding-left: 58vw;
   padding-bottom: 10vh;
 }
+.wrapper {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.typing-demo {
+  width: 27ch;
+  animation: typing 3s steps(23), blink .6s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 4rem;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+.scroll-down {bottom: 50px;display: block; z-index: 100;
+  text-shadow: 0;width: 40px;height: 40px;border-bottom: 5px solid #fff;border-right: 5px solid #fff; z-index: 9;border-radius: 10%;
+  left: 50%;-webkit-transform: translate(-50%, 0%) rotate(45deg);-moz-transform: translate(-50%, 0%) rotate(45deg);transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation:fade_move_down 3s ease-in-out infinite;-moz-animation:fade_move_down 3s ease-in-out infinite;animation:fade_move_down 2s ease-in-out infinite;}
+  
+  /*animated scroll arrow animation*/
+  @-webkit-keyframes fade_move_down {
+    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @-moz-keyframes fade_move_down {
+    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @keyframes fade_move_down {
+    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  .download{
+    text-align: center;
+    margin: 10vh 0;
+  }
+  #resume{
+    margin-top: 20vh;
+  }
+  .button{
+    transition:all 1s ease;border:1px solid white;
+    color:white;text-decoration:none;font-size: 24px;font-weight: 700;
+    text-align:center;letter-spacing: 0.2em;
+    padding: 15px 45px;
+    border-radius: 33px;
+  }
+  .button:hover{
+    transition:all 0.5s ease;
+    color: black;
+    background-color: white;
+  }
